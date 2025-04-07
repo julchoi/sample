@@ -1,0 +1,14 @@
+:root{
+    --left-width : 24%;
+    --header-height : 60px;
+    --common-gap : 30px;
+}
+
+
+/* Tablet size */
+@media (min-width : 1023px) and (max-width:1439px) {
+    :root{
+        --header-height : 42px;
+        --common-gap : 15px;
+    }
+}
