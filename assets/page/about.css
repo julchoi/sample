@@ -1,15 +1,31 @@
+@keyframes opacityPage{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 .about {
     main {
         display: flex;
         width: 100%;
         height: calc(100vh - var(--header-height));        
         position: relative;
+        animation: opacityPage 1s linear 0s 1 normal forwards;
 
         section {
             .title{
                 text-transform: uppercase;
                 font-size: 18px;
                 color: var(--gray);
+
+                @media (min-width : 1023px) and (max-width:1439px) {
+                    &{
+                        font-size: 11px;
+                    }
+                }
             }
         }
 
@@ -27,6 +43,12 @@
                         display: block;
                         width: 47.8%;
                         flex-shrink: 0;
+
+                        @media (min-width : 1023px) and (max-width:1439px) {
+                            &{
+                                width: 42.8%;
+                            }
+                        }
                     }
     
                     >p {
@@ -37,6 +59,13 @@
                             display: block;
                             height: 15px;
                         }
+
+                        @media (min-width : 1023px) and (max-width:1439px) {
+                            &{
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
                     }
     
                     >ul{
@@ -44,17 +73,36 @@
                         flex-direction: column;
                         gap: 24px;
 
+                        @media (min-width : 1023px) and (max-width:1439px) {
+                            &{
+                                gap: 12px;
+                            }
+                        }
+
                         >li{
                             span{
                                 font-size: 20px;
                                 color: var(--gray);
                                 display: block;
                                 margin-bottom: 8px;
+
+                                @media (min-width : 1023px) and (max-width:1439px) {
+                                    &{
+                                        font-size: 12px;
+                                        margin-bottom: 3px;
+                                    }
+                                }
                             }
                             b{
                                 font-size: 22px;
                                 font-weight: 500;
                                 line-height: 30px;
+                                @media (min-width : 1023px) and (max-width:1439px) {
+                                    &{
+                                        font-size: 14px;
+                                        line-height: 1;
+                                    }
+                                }
                             }
                         }
                     }
@@ -76,11 +124,24 @@
             margin-left: var(--common-gap);
             flex-shrink: 0;
 
+            @media (min-width : 1023px) and (max-width:1439px) {
+                &{
+                    width: 39%;
+                }
+            }
+            
+
             .img-box{
                 width: 100%;
                 height: calc(100% - 85px);
                 border-radius: 20px;
                 overflow: hidden;
+
+                @media (min-width : 1023px) and (max-width:1439px) {
+                    &{
+                       height: 480px;
+                    }
+                }
 
                 img{
                     width: 100%;
@@ -97,13 +158,44 @@
                 width: 100%;
                 
                 ul{
-                    a{
-                        font-size: 20px;
-                        font-weight: 600;
-                        display: inline-block;
-                        width: 250px;
-                        margin-right: 8px;
-                        margin-bottom: 8px;
+                    li{
+                        a{
+                            font-size: 20px;
+                            font-weight: 600;
+                            display: inline-block;
+                            width: 250px;
+                            margin-right: 8px;
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    @media (min-width : 1023px) and (max-width:1439px) {
+                        &.desktop{
+                            display: none;
+                        }
+                    }
+
+                    &.tablet{
+                        display: none;
+
+                        @media (min-width : 1023px) and (max-width:1439px) {
+                            &{
+                                display: flex;
+                                gap: 22px;
+
+                                >li{
+                                    display: flex;
+                                    flex-direction: column;
+                                    
+                                    a{
+                                        font-size: 12px;
+                                        width: unset;
+                                        margin-right: 0;
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

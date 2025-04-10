@@ -8,7 +8,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"
         integrity="sha512-WaqrlkVlJRs7/+/McaNTsxOA8LGnPK9pzfzTTHOCzo/XcgcC9yG8JJxJ+IGYn3j65x2DP9q0o8fBX8HtBJuc2g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"
+        integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Work</title>
 </head>
 
@@ -50,44 +53,44 @@
             <div class="right grid">
                 <div class="grid-sizer"></div>
                 <div class="blank-top grid-item"></div>
-                <div class="img-box grid-item" data-id="1">
+                <div class="img-box grid-item" data-id="1" >
                     <a href="" class="test01">
                         <img src="assets/images/img_works_01.png" alt="">
                     </a>
                 </div>
-                <div class="img-box grid-item" data-id="2">
+                <div class="img-box grid-item margin-none" data-id="2" >
                     <a href="" class="test02">
                         <img src="assets/images/img_works_02.png" alt="">
                     </a>
                 </div>
 
-                <div class="img-box grid-item" data-id="4">
+                <div class="img-box grid-item" data-id="4" >
                     <a href="" class="test04">
                         <img src="assets/images/img_works_04.png" alt="">
                     </a>
                 </div>
-                <div class="img-box grid-item" data-id="3">
+                <div class="img-box grid-item margin-none" data-id="3" >
                     <a href="" class="test03">
                         <img src="assets/images/img_works_03.png" alt="">
                     </a>
                 </div>
 
-                <div class="img-box grid-item" data-id="6">
+                <div class="img-box grid-item margin-none" data-id="6" >
                     <a href="" class="test06">
                         <img src="assets/images/img_works_06.png" alt="">
                     </a>
                 </div>
-                <div class="img-box grid-item" data-id="5">
+                <div class="img-box grid-item" data-id="5" >
                     <a href="" class="test05">
                         <img src="assets/images/img_works_05.png" alt="">
                     </a>
                 </div>
-                <div class="img-box grid-item" data-id="8">
+                <div class="img-box grid-item margin-none" data-id="8" >
                     <a href="" class="test08">
                         <img src="assets/images/img_works_08.png" alt="">
                     </a>
                 </div>
-                <div class="img-box grid-item" data-id="7">
+                <div class="img-box grid-item" data-id="7" >
                     <a href="" class="test07">
                         <img src="assets/images/img_works_07.png" alt="">
                     </a>
@@ -97,24 +100,28 @@
         </main>
     </div>
 
-    <script src="js/script.js"></script>
-    <script>
-        //갤러리뷰
 
+    <script>
         const grid = document.querySelector('.grid');
-        
-        var msnry = new Masonry('.grid', {
+
+        // Masonry 초기화
+        const msnry = new Masonry(grid, {
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
             percentPosition: true,
-            gutter: 20,
             fitWidth: false
-        }); 
+        });
 
+        // 이미지가 다 로드된 후에만 실행
         imagesLoaded(grid, function () {
             msnry.layout();
         });
+
     </script>
+
+    <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

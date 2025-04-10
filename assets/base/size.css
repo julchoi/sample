@@ -10,5 +10,6 @@
     :root{
         --header-height : 42px;
         --common-gap : 15px;
+        --left-width : 25%;
     }
 }

@@ -2,7 +2,7 @@ header {
     height: var(--header-height);
     border-bottom: 1px solid #000;
     position: fixed;
-    width: calc(100% - 60px);
+    width: calc(100% - (var(--common-gap)*2));
     background-color: #fff;
     z-index: 10;
 
@@ -13,10 +13,16 @@ header {
         height: 100%;
 
         ul {
-            width: calc(var(--left-width) + 90px);
+            width: calc(var(--left-width) + var(--common-gap) + 60px);
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @media (min-width : 1023px) and (max-width:1439px) {
+                &{
+                    width: calc(var(--left-width) + var(--common-gap) + 48px);
+                }
+            }
 
             li {
                 a {

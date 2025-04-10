@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             const offset = imageTop - containerTop + scrollContainer.scrollTop - 100;
 
+
             scrollContainer.scrollTo({
                 top: offset,
                 behavior: "smooth"
@@ -220,7 +221,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                observer.unobserve(entry.target); // 한 번만 실행
+                //observer.unobserve(entry.target); // 한 번만 실행
+            } else {
+                entry.target.classList.remove('show');
             }
         });
     }, {
