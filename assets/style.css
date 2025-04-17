@@ -6,6 +6,7 @@
 @import url(components/layout.css);
 @import url(components/header.css);
 @import url(components/work-list.css);
+@import url(components/m-nav.css);
 
 @import url(page/about.css);
 @import url(page/work.css);

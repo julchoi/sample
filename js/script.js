@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     customElements.define('work-list', workList);
 
 
+    
+
 
     // 해당 페이지에서 리스트 요소 활성화
     const workDetail = document.querySelectorAll(".detail .list-group > ul > li > a");
@@ -152,6 +154,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
             // hover 클래스 제거
             document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.remove("hover");
         });
+
+
+        // 태블릿 터치 시 hover 효과
+        let touched = false;
+    
+        img.addEventListener('touchstart', (e) => {
+            if (!touched) {
+                touched = true;
+    
+                // 강제로 hover 스타일을 보여주기 위해 focus
+                document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.add('hover');
+    
+                // 짧은 시간 후에 다시 false로 초기화 (예: 1.5초)
+                setTimeout(() => {
+                    touched = false;
+                    document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.remove('hover-simulated');
+                }, 1500);
+    
+                e.preventDefault(); // 첫 번째 터치에서 링크 이동 방지
+            }
+        });
+
     });
 
 
@@ -233,4 +257,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
     items.forEach((item) => observer.observe(item));
 
 
+
+    // mobile bottom menu
+    const mMenuBtn = document.querySelector('.m-menu-btn');
+    const mMenuNav = document.querySelector('.m-nav');
+    const mMenuClose = document.querySelector('.m-nav-close');
+
+    mMenuBtn.addEventListener('click', () => {
+        mMenuNav.classList.toggle('active');
+    });
+
+    mMenuClose.addEventListener('click', () => {
+         mMenuNav.classList.remove('active');
+    });
 });

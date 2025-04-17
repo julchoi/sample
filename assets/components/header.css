@@ -1,6 +1,6 @@
 header {
     height: var(--header-height);
-    border-bottom: 1px solid #000;
+    border-bottom: var(--border-height) solid #000;
     position: fixed;
     width: calc(100% - (var(--common-gap)*2));
     background-color: #fff;
@@ -19,7 +19,7 @@ header {
             justify-content: space-between;
 
             @media (min-width : 1023px) and (max-width:1439px) {
-                &{
+                & {
                     width: calc(var(--left-width) + var(--common-gap) + 48px);
                 }
             }
@@ -32,6 +32,13 @@ header {
                     &.logo {
                         font-weight: 600;
                         font-size: 24px;
+
+                        /* mobile size */
+                        @media (min-width : 360px) and (max-width:1023px) {
+                            & {
+                                font-size: 17px;
+                            }
+                        }
                     }
 
                     &.active {
@@ -40,7 +47,7 @@ header {
 
 
                     /* Tablet size */
-                    @media (min-width : 1023px) and (max-width:1439px) {
+                    @media (min-width : 1024px) and (max-width:1439px) {
                         & {
                             font-size: 16px;
 
@@ -49,8 +56,22 @@ header {
                             }
                         }
                     }
+
+                    /* mobile size */
+                    @media (min-width : 360px) and (max-width:1023px) {
+                        &:not(.logo) {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
     }
+
+
+     /* mobile size */
+     @media (min-width : 360px) and (max-width:1023px) {
+        position: unset;
+        width: 100%;
+     }
 }

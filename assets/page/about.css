@@ -20,6 +20,7 @@
                 text-transform: uppercase;
                 font-size: 18px;
                 color: var(--gray);
+                white-space: nowrap;
 
                 @media (min-width : 1023px) and (max-width:1439px) {
                     &{
@@ -158,13 +159,15 @@
                 width: 100%;
                 
                 ul{
+                    width: 415px;
                     li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                         a{
                             font-size: 20px;
                             font-weight: 600;
                             display: inline-block;
-                            width: 250px;
-                            margin-right: 8px;
                             margin-bottom: 8px;
                         }
                     }
@@ -181,11 +184,13 @@
                         @media (min-width : 1023px) and (max-width:1439px) {
                             &{
                                 display: flex;
+                                justify-content: flex-end;
                                 gap: 22px;
 
                                 >li{
                                     display: flex;
                                     flex-direction: column;
+                                    align-items: flex-start;
                                     
                                     a{
                                         font-size: 12px;
@@ -209,6 +214,12 @@
             height: 150px;
             background-color: #fff;
             transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    }
+
+    @media (min-width : 1023px) and (max-width:1439px) {
+        &{
+            overflow: hidden;
         }
     }
 

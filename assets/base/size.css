@@ -2,6 +2,7 @@
     --left-width : 24%;
     --header-height : 60px;
     --common-gap : 30px;
+    --border-height : 1.5px
 }
 
 
@@ -11,5 +12,15 @@
         --header-height : 42px;
         --common-gap : 15px;
         --left-width : 25%;
+        --border-height : 1px
+    }
+}
+
+ /* mobile size */
+ @media (min-width : 360px) and (max-width:1023px){
+    :root{
+        --common-gap : 15px;
+        --header-height : 48px;
+        --border-height : 1px
     }
 }
