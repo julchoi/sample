@@ -175,6 +175,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
               });
             } else {
               // 두 번째 터치면 링크 이동
+              link.classList.remove('active');
+              touched = false;
               window.location.href = img.firstElementChild('a').getAttribute('href');
             }
           });
