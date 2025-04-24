@@ -116,11 +116,18 @@
                             font-size: 22px;
                             letter-spacing: 0.6px;
                             font-weight: 500;
+                            border-radius: 20px;
                         }
 
+                        .m-title{
+                            text-decoration: underline;
+                        }
+
+                         /* tablet Size */
                         @media (min-width: 1023px) and (max-width: 1439px){
                             &::after {
                                 font-size: 16px;
+                                border-radius: 10px;
                             }
                         }
 
@@ -128,6 +135,7 @@
                         @media (min-width: 360px) and (max-width: 1023px) {
                             &::after {
                                 font-size: 15px;
+                                border-radius: 10px;
                             }
                         }
                     }
@@ -248,7 +256,7 @@
                 .left{
                     width: 100%;
                     padding-top: var(--common-gap);
-                    padding-bottom: 34px;
+                    padding-bottom: 30px;
 
                     .introduce{
                         width: 100%;
@@ -271,12 +279,16 @@
                         border-radius: 0;
 
                         >a {
+                            margin-bottom: 12px;
 
                             img{
                                 border-radius: 10px;
                             }
                             .m-title{
                                 display: block;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
                                 font-size: 12px;
                                 font-weight: 600;
                                 margin-top: 7px;

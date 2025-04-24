@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // work list 템플릿화
     class workList extends HTMLElement {
         connectedCallback() {
-            this.innerHTML = `<section class="detail">
+            this.innerHTML = `<section class="detail-list">
                     <!-- work list -->
                     <div class="list-group" id="listGroup">
 
@@ -124,6 +124,39 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     customElements.define('work-list', workList);
+
+
+    // m-nav 템플릿화
+    class mNav extends HTMLElement{
+        connectedCallback(){
+            this.innerHTML = `<div class="m-bottom-menu">
+            <button class="m-menu-btn">Menu</button>
+            <nav class="m-nav">
+                <button class="m-nav-close">
+                    <img src="assets/images/icons/ico_close.svg" alt="nav close">
+                </button>
+                <ul>
+                    <li>
+                        <a href="work.html">Work</a>
+                    </li>
+                    <li>
+                        <a href="archive.html">Archive</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+                <div>
+                    <a href="">Instagram <img src="assets/images/icons/ico_arrow-dig.svg" alt="go instagram"></a>
+                    <a href="">LinkedIn <img src="assets/images/icons/ico_arrow-dig.svg" alt="go LinkedIn"></a>
+                </div>
+            </nav>
+        </div>`
+        }
+    }
+
+    customElements.define('m-nav', mNav);
+
 
 
 
