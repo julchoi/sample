@@ -1,11 +1,12 @@
-/* inter */
+/*inter*/
 /* regular 400 */
-/* medium 500 */
+/*  medium 500 */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 
 *{
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #000;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;

@@ -1,26 +1,26 @@
 :root{
-    --left-width : 24%;
-    --header-height : 60px;
-    --common-gap : 30px;
-    --border-height : 1.5px
+    --left-width: 24%;
+    --header-height: 60px;
+    --common-gap: 30px;
+    --border-thickness: 1.5px;
 }
 
-
-/* Tablet size */
-@media (min-width : 1023px) and (max-width:1439px) {
+/* Tablet Size */
+@media (min-width: 1023px) and (max-width: 1439px){
     :root{
-        --header-height : 42px;
-        --common-gap : 15px;
-        --left-width : 25%;
-        --border-height : 1px
+        --header-height: 42px;
+        --common-gap: 15px;
+        --left-width: 25%;
+        --border-thickness: 1px;
     }
 }
 
- /* mobile size */
- @media (min-width : 360px) and (max-width:1023px){
+/* Mobile Size */
+@media (min-width: 360px) and (max-width: 1023px){
     :root{
-        --common-gap : 15px;
-        --header-height : 48px;
-        --border-height : 1px
+        --header-height: 48px;
+        --common-gap: 15px;
+        --border-thickness: 1px;
+
     }
 }

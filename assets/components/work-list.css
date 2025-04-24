@@ -5,31 +5,20 @@ work-list{
 
         .list-group {
             width: 100%;
-            
+
             ul {
                 width: 100%;
 
-                &:first-child {
-                    margin-bottom: 68px;
-
-                    @media (min-width : 1023px) and (max-width:1439px) {
-                        &{
-                           margin-bottom: 40px;
-                        }
-                    }
-                    
-                }
-
-                > li {
-                    border-top: 1px solid #000;
+                li {
+                    border-top: var(--border-thickness) solid #000;
 
                     a{
                         display: flex;
                         align-items: center;
                         line-height: 46px;
 
-                        @media (min-width : 1023px) and (max-width:1439px) {
-                            &{
+                        @media (min-width: 1023px) and (max-width: 1439px){
+                            & {
                                 line-height: 32px;
                             }
                         }
@@ -41,10 +30,10 @@ work-list{
                         text-transform: uppercase;
                         font-size: 16px;
 
-                        @media (min-width : 1023px) and (max-width:1439px) {
-                            &{
-                                line-height: 32px;
+                        @media (min-width: 1023px) and (max-width: 1439px){
+                            & {
                                 font-size: 11px;
+                                line-height: 32px;
                             }
                         }
                     }
@@ -55,13 +44,14 @@ work-list{
                     }
 
                     &:last-child{
-                        border-bottom: 1px solid #000;
+                        border-bottom: var(--border-thickness) solid #000;
                         &:hover, &.active{
-                            border-top: 1px solid var(--primary);
-                            border-bottom: 1px solid var(--primary);
+                            border-top: var(--border-thickness) solid var(--primary);
+                            border-bottom: var(--border-thickness) solid var(--primary);
                             cursor: pointer;
                         }
                     }
+
 
                     &:not(:first-child) {
                         span {
@@ -70,9 +60,9 @@ work-list{
                             &:first-child {
                                 margin-right: 20px;
 
-                                @media (min-width : 1023px) and (max-width:1439px) {
-                                    &{
-                                        margin-right : 14px;
+                                @media (min-width: 1023px) and (max-width: 1439px){
+                                    & {
+                                        margin-right: 14px;
                                     }
                                 }
                             }
@@ -85,8 +75,8 @@ work-list{
                                 display: none;
                             }
 
-                            @media (min-width : 1023px) and (max-width:1439px) {
-                                &{
+                            @media (min-width: 1023px) and (max-width: 1439px){
+                                & {
                                     font-size: 12px;
                                 }
                             }
@@ -94,11 +84,11 @@ work-list{
                     }
 
                     &:hover, &.hover {
-                        border-top: 1px solid var(--primary);
+                        border-top: var(--border-thickness) solid var(--primary);
                         cursor: pointer;
 
                         +li{
-                            border-top: 1px solid var(--primary);
+                            border-top: var(--border-thickness) solid var(--primary);
                         }
                         
                         span {
@@ -114,13 +104,12 @@ work-list{
                         }
                     }
 
-
                     &.active{
-                        border-top: 1px solid var(--primary);
+                        border-top: var(--border-thickness) solid var(--primary);
                         pointer-events: none;
 
                         +li{
-                            border-top: 1px solid var(--primary);
+                            border-top: var(--border-thickness) solid var(--primary);
                         }
                         
                         span {
@@ -131,18 +120,41 @@ work-list{
                             }
                         }
                     }
-                    
+                 
+                    @media (min-width: 1023px) and (max-width: 1439px){
+                        & {
+                            border-top: var(--border-thickness) solid #000;
+                        }
+
+                        &:last-child{
+                            border-bottom: var(--border-thickness) solid #000;
+                            &:hover, &.active{
+                                border-top: var(--border-thickness) solid var(--primary);
+                                border-bottom: var(--border-thickness) solid var(--primary);
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
 
-                
+                &:first-child {
+                    margin-bottom: 68px;
+
+                    @media (min-width: 1023px) and (max-width: 1439px){
+                        & {
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+
             }
         }
+
     }
 
-    /* mobile size */
-    @media (min-width : 360px) and (max-width:1023px) {
-       &{
-        display: none;
-       }
-    }
+    @media (min-width: 360px) and (max-width: 1023px){
+            &{
+                display: none;
+            }
+        }
 }

@@ -1,23 +1,10 @@
-@keyframes myAnim {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 .work {
+
     main {
         display: flex;
         gap: var(--common-gap);
-        height: calc(100dvh - var(--header-height));
+        height : calc(100vh - var(--header-height));
         padding-top: var(--header-height);
-
 
         .left {
             padding-top: var(--common-gap);
@@ -27,7 +14,7 @@
             justify-content: space-between;
             padding-bottom: 98px;
 
-            @media (min-width : 1023px) and (max-width:1439px) {
+            @media (min-width: 1023px) and (max-width: 1439px){
                 & {
                     padding-bottom: 77px;
                 }
@@ -41,9 +28,9 @@
                 p {
                     width: 100%;
                     font-size: 20px;
-                    line-height: 26px;
+                    line-height: 28px;
 
-                    @media (min-width : 1023px) and (max-width:1439px) {
+                    @media (min-width: 1023px) and (max-width: 1439px){
                         & {
                             font-size: 14px;
                             line-height: 18px;
@@ -60,14 +47,13 @@
             overflow: hidden;
             overflow-y: auto;
 
-            .grid-sizer,
-            .grid-item {
-                width: 49.2%;
+            .grid-sizer,.grid-item { 
+                width: 49.3%;
                 direction: ltr;
             }
 
             .grid-item {
-                margin-bottom: 20px;
+                margin-bottom: 17px;
                 border-radius: 20px;
                 overflow: hidden;
                 opacity: 0;
@@ -79,11 +65,11 @@
                     transform: translateY(0);
                 }
 
-                &.margin-none {
+                &.margin-none{
                     margin-right: 0;
                 }
 
-                @media (min-width : 1023px) and (max-width:1439px) {
+                @media (min-width: 1023px) and (max-width: 1439px){
                     & {
                         margin-bottom: 11px;
                     }
@@ -102,7 +88,7 @@
                         object-fit: cover;
                     }
 
-                    .m-title {
+                    .m-title{
                         display: none;
                     }
 
@@ -113,7 +99,7 @@
 
 
                     &:hover,
-                    &:active,
+                    &:active, 
                     &.active {
                         &::after {
                             content: '';
@@ -123,25 +109,23 @@
                             top: 0;
                             left: 0;
                             background-color: rgba(0, 0, 0, 0.4);
-                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             text-align: center;
                             align-content: center;
                             font-size: 22px;
+                            letter-spacing: 0.6px;
+                            font-weight: 500;
                         }
 
-                        .m-title{
-                            text-decoration: underline;
-                        }
-
-                        @media (min-width : 1023px) and (max-width:1439px) {
+                        @media (min-width: 1023px) and (max-width: 1439px){
                             &::after {
                                 font-size: 16px;
                             }
                         }
 
-                        @media (min-width : 360px) and (max-width:1023px) {
+                        /* Mobile Size */
+                        @media (min-width: 360px) and (max-width: 1023px) {
                             &::after {
                                 font-size: 15px;
                             }
@@ -149,131 +133,166 @@
                     }
 
                     /* 썸네일관리 */
-                    &.test01 {
-
-                        &:hover,
-                        &.active {
+                    &.work01 {
+                        &:hover, &.active {
                             &::after {
-                                content: 'test01';
+                                content: 'AHOLE Typeface';
                             }
 
                         }
                     }
 
-                    &.test02 {
-
-                        &:hover,
-                        &.active {
+                    &.work02 {
+                        &:hover, &.active {
                             &::after {
-                                content: 'test02';
+                                content: 'MORII Magazine';
                             }
 
                         }
                     }
 
+                    &.work03 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'COMM DSGN';
+                            }
+
+                        }
+                    }
+
+                    &.work04 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'Hey, Nike!';
+                            }
+
+                        }
+                    }
+
+                    &.work05 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'Airplan';
+                            }
+
+                        }
+                    }
+
+                    &.work06 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'Pedal to Petal';
+                            }
+
+                        }
+                    }
+
+                    &.work07 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'Pedal to Petal';
+                            }
+
+                        }
+                    }
+
+                    &.work08 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'Yearbook Poster';
+                            }
+
+                        }
+                    }
+
+                    &.work09 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'SOLE Magazine';
+                            }
+
+                        }
+                    }
+
+                    &.work10 {
+                        &:hover, &.active {
+                            &::after {
+                                content: 'COMM DSGN';
+                            }
+
+                        }
+                    }
 
                 }
             }
 
-            .blank-top {
+            .blank-top{
                 width: 100%;
                 height: var(--common-gap);
                 margin-bottom: 0;
             }
 
-            .blank {
+            .blank{
                 width: 100%;
                 height: 80px;
             }
-
-            &::-webkit-scrollbar {
-                width: 6px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: transparent; /* 트랙은 안 보이게 */
-              }
-              
-
-            &::-webkit-scrollbar-thumb {
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-            }
-
-            &::after {
-                content: ''; /* 마치 가상 요소처럼 만들어서, 스크롤바를 위에 겹치게 하는 효과 */
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 6px; /* 스크롤바 크기 */
-                height: 100%;
-                background: rgba(0, 0, 0, 0); /* 스크롤바를 오버레이 효과로 표시 */
-                pointer-events: none; /* 가상 요소로 실제 클릭을 방지 */
-              }
         }
 
+       /* Mobile Size */ 
+        @media (min-width: 360px) and (max-width: 1023px){
+            &{
+                flex-direction: column;
+                gap: 0;
+                padding-top: 0;
 
-        /* mobile size */
-        @media (min-width : 360px) and (max-width:1023px) {
-            flex-direction: column;
-            gap: 0;
-            padding-top: 0;
-
-            .left {
-                width: 100%;
-                padding-top: var(--common-gap);
-                padding-bottom: var(--common-gap);
-
-                .introduce {
+                .left{
                     width: 100%;
+                    padding-top: var(--common-gap);
+                    padding-bottom: 34px;
 
-                    >p {
-                        font-size: 14px;
-                        line-height: 18px;
+                    .introduce{
+                        width: 100%;
+
+                        >p{
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
                     }
                 }
-            }
 
-            .right {
-                width: 100%;
-                height: 100% !important;
-                overflow: unset;
-
-                .grid-sizer,
-                .grid-item {
+                .right{
                     width: 100%;
+                    /* height: 100% !important; */
                     overflow: unset;
-                    border-radius: 0;
 
-                    >a {
-                        margin-bottom: 10px;
-                        img {
-                            border-radius: 10px;
+                    .grid-sizer, .grid-item { 
+                        width: 100%;
+                        overflow: unset;
+                        border-radius: 0;
+
+                        >a {
+
+                            img{
+                                border-radius: 10px;
+                            }
+                            .m-title{
+                                display: block;
+                                font-size: 12px;
+                                font-weight: 600;
+                                margin-top: 7px;
+                                margin-bottom: 3px;
+                            }
+
                         }
 
-                        .m-title {
-                            display: block;
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
-                            font-size: 12px;
-                            font-weight: 600;
-                            margin-top: 8px;
-                            
+                        &.blank-top{
+                            display: none;
                         }
-    
-                    }
-
-                   
-                    &.blank-top {
-                        display: none;
                     }
                 }
             }
-        }
+         }
+
     }
-
-
-    
 
 }

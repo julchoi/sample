@@ -12,4 +12,115 @@
 @import url(page/work.css);
 
 @import url(page/detail.css);
+/*
+.wrap{
+    padding-top: 0px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    height: 100vh;
 
+    header{
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: 60px;    
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        margin-bottom: 16px;
+
+        h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        ul{
+            li{
+                &:first-child{
+                    margin-bottom: 8px;
+                }
+            }
+        }
+     }
+
+     main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        height: 100%;
+
+        section{
+            height: 100%;
+
+            &.list-container{
+                flex: 0.3;
+
+                >div{
+                    height: 80px;
+                    padding: 5px 0;
+
+                    &.work-info{
+                        display: none;
+                        border-bottom: 1px solid #000;
+                    }
+
+
+                    &.list-group{
+                        ul{
+                            margin-bottom: 40px;
+                            li{
+                                border-top: 1px solid #000;
+                                border-bottom: 1px solid #000;
+                                height: var(--common-gap);
+                                .list-title{
+                                    font-size: 17px;
+                                    font-weight: bold;
+                                }
+
+                                span{
+                                    font-size: 15px;
+                                    line-height: var(--common-gap);
+                                }
+
+                                &:not(:first-child){
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                }
+
+                                &:hover{
+                                    border-bottom: 1px solid orange;
+                                    span{
+                                        color: orange;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.work-detail{
+                flex: 0.7;
+
+                .scroll{
+                    height: 80%;
+                    overflow-y: auto;
+
+                    .example{
+                        li{
+                            width: 100%;
+                            height: 400px;
+                            margin-bottom:24px;
+                            background-color: #eee;                        }
+                    }
+                }
+            }
+        }
+
+        }
+     }
+*/
