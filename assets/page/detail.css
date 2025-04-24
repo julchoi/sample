@@ -1,5 +1,8 @@
 .detail {
     height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
     main {
         .left {
             .work-info {
