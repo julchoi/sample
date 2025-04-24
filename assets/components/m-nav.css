@@ -43,8 +43,10 @@
             /* Page link */
             >ul {
                 li {
-                    font-size: 20px;
-                    font-weight: 500;
+                    > a{
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 12px;
