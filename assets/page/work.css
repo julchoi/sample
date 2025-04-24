@@ -123,11 +123,16 @@
                             top: 0;
                             left: 0;
                             background-color: rgba(0, 0, 0, 0.4);
+                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             text-align: center;
                             align-content: center;
                             font-size: 22px;
+                        }
+
+                        .m-title{
+                            text-decoration: underline;
                         }
 
                         @media (min-width : 1023px) and (max-width:1439px) {
@@ -241,18 +246,25 @@
                     border-radius: 0;
 
                     >a {
+                        margin-bottom: 10px;
                         img {
                             border-radius: 10px;
                         }
 
                         .m-title {
                             display: block;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
                             font-size: 12px;
                             font-weight: 600;
                             margin-top: 8px;
+                            
                         }
+    
                     }
 
+                   
                     &.blank-top {
                         display: none;
                     }
