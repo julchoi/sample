@@ -12,7 +12,7 @@
 .about {
 
       /* Mobile Size */
-      @media (min-width: 360px) and (max-width: 1023px) {
+      @media (min-width: 360px) and (max-width: 661px) {
         height: 100dvh;
         overflow-x: hidden;
         overflow-y: auto;
@@ -28,7 +28,7 @@
         animation: opacityPage 1.3s ease-in-out 0s 1 normal forwards;
 
         /* tablet size */
-        @media (min-width: 1023px) and (max-width: 1439px){
+        @media (min-width: 661px) and (max-width: 1439px){
             &{
                 height: fit-content;
             }
@@ -41,7 +41,7 @@
                 color: var(--gray);
                 white-space: nowrap;
 
-                @media (min-width: 1023px) and (max-width: 1439px){
+                @media (min-width: 661px) and (max-width: 1439px){
                     & {
                         font-size: 11px;
                     }
@@ -50,7 +50,7 @@
 
 
             /* tablet size */
-            @media (min-width: 1023px) and (max-width: 1439px){
+            @media (min-width: 661px) and (max-width: 1439px){
                 & {
                     height: fit-content;
                 }
@@ -62,7 +62,7 @@
                 padding-bottom: 100px;
 
                 /* tablet size */
-                @media (min-width: 1023px) and (max-width: 1439px){
+                @media (min-width: 661px) and (max-width: 1439px){
                     & {
                         padding-bottom: 0;
                     }
@@ -74,7 +74,7 @@
                     display: flex;
                     align-items: flex-start;
 
-                    @media (min-width: 1023px) and (max-width: 1439px){
+                    @media (min-width: 661px) and (max-width: 1439px){
                         & {
                             border-bottom: var(--border-thickness) solid var(--black);
                         }
@@ -85,7 +85,7 @@
                         width: 47.7%;
                         flex-shrink: 0;
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        @media (min-width: 661px) and (max-width: 1439px){
                             & {
                                 width: 45%;
                             }
@@ -101,7 +101,7 @@
                             height: 15px;
                         }
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        @media (min-width: 661px) and (max-width: 1439px){
                             & {
                                 font-size: 14px;
                                 line-height: 18px;
@@ -114,7 +114,7 @@
                         flex-direction: column;
                         gap: 24px;
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        @media (min-width: 661px) and (max-width: 1439px){
                             & {
                                 gap: 12px;
                             }
@@ -126,7 +126,7 @@
                                 display: block;
                                 margin-bottom: 8px;
 
-                                @media (min-width: 1023px) and (max-width: 1439px){
+                                @media (min-width: 661px) and (max-width: 1439px){
                                     & {
                                         font-size: 12px;
                                         margin-bottom: 3px;
@@ -138,7 +138,7 @@
                                 font-weight: 500;
                                 line-height: 30px;
 
-                                @media (min-width: 1023px) and (max-width: 1439px){
+                                @media (min-width: 661px) and (max-width: 1439px){
                                     & {
                                         font-size: 14px;
                                         line-height: 1px;
@@ -166,7 +166,7 @@
             margin-left: var(--common-gap);
             flex-shrink: 0;
 
-            @media (min-width: 1023px) and (max-width: 1439px){
+            @media (min-width: 661px) and (max-width: 1439px){
                 & {
                     width: 39%;
                 }
@@ -178,7 +178,7 @@
                 overflow: hidden;
                 border-radius: 20px;
 
-                @media (min-width: 1023px) and (max-width: 1439px){
+                @media (min-width: 661px) and (max-width: 1439px){
                     & {
                         height: 480px;
                     }
@@ -220,7 +220,7 @@
                             }
                         }
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        @media (min-width: 661px) and (max-width: 1439px){
                             &.desktop {
                                 display: none;
                             }
@@ -229,7 +229,7 @@
                         &.tablet{
                             display: none;
 
-                            @media (min-width: 1023px) and (max-width: 1439px){
+                            @media (min-width: 661px) and (max-width: 1439px){
                                 & {
                                     display: flex;
                                     justify-content: flex-end;
@@ -268,7 +268,7 @@
                     margin-left: 3px;
                 }
 
-                @media (min-width: 1023px) and (max-width: 1439px){
+                @media (min-width: 661px) and (max-width: 1439px){
                     &::after {
                         width: 13px;
                         height: 13px;
@@ -276,7 +276,7 @@
                     }
                 }
 
-                @media (min-width: 360px) and (max-width: 1023px){
+                @media (min-width: 360px) and (max-width: 661px){
                     &::after {
                         width: 13px;
                         height: 13px;
@@ -295,7 +295,7 @@
             transition: transform 0.3s ease, opacity 0.3s ease;
 
               /* tablet size */
-              @media (min-width: 1023px) and (max-width: 1439px){
+              @media (min-width: 661px) and (max-width: 1439px){
                 &{
                     display: none;
                 }
@@ -303,7 +303,7 @@
         }
 
         /* Mobile Size */
-        @media (min-width: 360px) and (max-width: 1023px) {
+        @media (min-width: 360px) and (max-width: 661px) {
             & {
                 display: block;
                 padding-top: var(--common-gap);
@@ -409,7 +409,7 @@
         
     }
 
-    @media (min-width: 1023px) and (max-width: 1439px){
+    @media (min-width: 661px) and (max-width: 1439px){
         & {
             overflow: hidden;
         }
