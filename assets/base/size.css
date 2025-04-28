@@ -6,7 +6,7 @@
 }
 
 /* Tablet Size */
-@media (min-width: 661px) and (max-width: 1439px){
+@media (min-width: 1023px) and (max-width: 1439px){
     :root{
         --header-height: 42px;
         --common-gap: 15px;
@@ -16,7 +16,7 @@
 }
 
 /* Mobile Size */
-@media (min-width: 360px) and (max-width: 661px){
+@media (min-width: 360px) and (max-width: 1023px){
     :root{
         --header-height: 48px;
         --common-gap: 15px;

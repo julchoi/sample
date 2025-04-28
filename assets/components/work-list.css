@@ -17,7 +17,7 @@ work-list{
                         align-items: center;
                         line-height: 46px;
 
-                        @media (min-width: 661px) and (max-width: 1439px){
+                        @media (min-width: 1023px) and (max-width: 1439px){
                             & {
                                 line-height: 32px;
                             }
@@ -30,7 +30,7 @@ work-list{
                         text-transform: uppercase;
                         font-size: 16px;
 
-                        @media (min-width: 661px) and (max-width: 1439px){
+                        @media (min-width: 1023px) and (max-width: 1439px){
                             & {
                                 font-size: 11px;
                                 line-height: 32px;
@@ -60,7 +60,7 @@ work-list{
                             &:first-child {
                                 margin-right: 20px;
 
-                                @media (min-width: 661px) and (max-width: 1439px){
+                                @media (min-width: 1023px) and (max-width: 1439px){
                                     & {
                                         margin-right: 14px;
                                     }
@@ -75,7 +75,7 @@ work-list{
                                 display: none;
                             }
 
-                            @media (min-width: 661px) and (max-width: 1439px){
+                            @media (min-width: 1023px) and (max-width: 1439px){
                                 & {
                                     font-size: 12px;
                                 }
@@ -121,7 +121,7 @@ work-list{
                         }
                     }
                  
-                    @media (min-width: 661px) and (max-width: 1439px){
+                    @media (min-width: 1023px) and (max-width: 1439px){
                         & {
                             border-top: var(--border-thickness) solid #000;
                         }
@@ -140,7 +140,7 @@ work-list{
                 &:first-child {
                     margin-bottom: 68px;
 
-                    @media (min-width: 661px) and (max-width: 1439px){
+                    @media (min-width: 1023px) and (max-width: 1439px){
                         & {
                             margin-bottom: 40px;
                         }
@@ -152,7 +152,7 @@ work-list{
 
     }
 
-    @media (min-width: 360px) and (max-width: 661px){
+    @media (min-width: 360px) and (max-width: 1023px){
             &{
                 display: none;
             }
