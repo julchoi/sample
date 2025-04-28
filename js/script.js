@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     //m-nav template
     class mNav extends HTMLElement {
-        connectedCallback(){
+        connectedCallback() {
             this.innerHTML = `<div class="m-bottom-menu">
             <button class="m-menu-btn">Menu</button>
             <nav class="m-nav">
@@ -156,57 +156,57 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     customElements.define('m-nav', mNav);
 
-       // 해당 페이지에서 리스트 요소 활성화
-       const workDetail = document.querySelectorAll(".detail .list-group > ul > li > a");
-       const currentPath = window.location.pathname; // 현재 페이지 경로
-   
-       workDetail.forEach((link) => {
-           const linkPath = new URL(link.href, window.location.origin).pathname;
-           if (linkPath === currentPath) {
-               link.parentNode.classList.add("active");
-           }
-       });
+    // 해당 페이지에서 리스트 요소 활성화
+    const workDetail = document.querySelectorAll(".detail .list-group > ul > li > a");
+    const currentPath = window.location.pathname; // 현재 페이지 경로
+
+    workDetail.forEach((link) => {
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+        if (linkPath === currentPath) {
+            link.parentNode.classList.add("active");
+        }
+    });
 
 
-        // image hover시 list도 hover effect
-        document.querySelectorAll(".grid .grid-item").forEach((img) => {
+    // image hover시 list도 hover effect
+    document.querySelectorAll(".grid .grid-item").forEach((img) => {
         img.addEventListener("mouseenter", function () {
             const id = this.dataset.id; // 이미지의 data-id 값 가져오기
             document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.add("hover");
         });
-      
+
         img.addEventListener("mouseleave", function () {
-          const id = this.dataset.id;
-          
-          // hover class 제거
-          document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.remove("hover");
+            const id = this.dataset.id;
+
+            // hover class 제거
+            document.querySelector(`.list-group li[data-id="${id}"]`)?.classList.remove("hover");
         });
 
         // tablet touch hover effect 
-       let touched = false;
+        let touched = false;
 
-       img.addEventListener('touchstart', (e) => {
-           if (!touched) {
-             e.preventDefault(); // 첫 터치에 링크 이동 막음
-             img.classList.add('active');
-             touched = true;
-       
-             // 다른 요소를 터치하면 상태 초기화
-             document.addEventListener('touchstart', function resetTouch(event) {
-               if (!link.contains(event.target)) {
-                 link.classList.remove('active');
-                 touched = false;
-                 document.removeEventListener('touchstart', resetTouch);
-               }
-             });
-           } else {
-             // 두 번째 터치면 링크 이동
-             link.classList.remove('active');
-             touched = false;
-             window.location.href = img.firstElementChild('a').getAttribute('href');
-           }
-         });
-   
+        img.addEventListener('touchstart', (e) => {
+            if (!touched) {
+                e.preventDefault(); // 첫 터치에 링크 이동 막음
+                img.classList.add('active');
+                touched = true;
+
+                // 다른 요소를 터치하면 상태 초기화
+                document.addEventListener('touchstart', function resetTouch(event) {
+                    if (!link.contains(event.target)) {
+                        link.classList.remove('active');
+                        touched = false;
+                        document.removeEventListener('touchstart', resetTouch);
+                    }
+                });
+            } else {
+                // 두 번째 터치면 링크 이동
+                link.classList.remove('active');
+                touched = false;
+                window.location.href = img.firstElementChild('a').getAttribute('href');
+            }
+        });
+
 
     });
     const scrollContainer = document.querySelector(".work .grid");
@@ -227,12 +227,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 behavior: "smooth"
             });
         });
-      
+
         list.addEventListener("mouseleave", function () {
-          const id = this.dataset.id;
-          
-          // hover class 제거
-          document.querySelector(`.grid .grid-item[data-id="${id}"] a`)?.classList.remove("active");
+            const id = this.dataset.id;
+
+            // hover class 제거
+            document.querySelector(`.grid .grid-item[data-id="${id}"] a`)?.classList.remove("active");
         });
     });
 
@@ -241,11 +241,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     let lastScrollTop = 0;
     let ticking = false;
     const targetElement = document.querySelector(".hide-bottom");
-    
+
     function onScroll() {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll - lastScrollTop > 3) { 
+        if (currentScroll - lastScrollTop > 3) {
             targetElement.style.transform = "translateY(100%)";
             targetElement.style.opacity = "0";
         } else if (lastScrollTop - currentScroll > 3) {
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
 
-    // 스크롤 시 아이템 애니메이션 효과
+    // 메인에서 스크롤 시 아이템 애니메이션 효과
     const items = document.querySelectorAll('.grid-item');
 
     const observer = new IntersectionObserver((entries) => {
@@ -285,7 +285,35 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     items.forEach((item) => observer.observe(item));
 
+
     
+    // 디테일에서 스크롤 시 아이템 애니메이션 효과
+    const detailDesc = document.querySelectorAll('.detail > main > .right');
+
+    const detailObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+
+            else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+
+    // 각 .right 안의 자식 요소들에 대해 observer 설정
+    detailDesc.forEach((rightSection) => {
+        const parts = rightSection.children;
+        Array.from(parts).forEach((item) => {
+            detailObserver.observe(item);
+        });
+    });
+
+
 
     // mobile bottom menu
     const mMenuBtn = document.querySelector('.m-menu-btn');
@@ -297,7 +325,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
     mMenuClose.addEventListener('click', () => {
-         mMenuNav.classList.remove('active');
+        mMenuNav.classList.remove('active');
     });
 
 });
