@@ -10,6 +10,13 @@
 }
 
 .about {
+
+      /* Mobile Size */
+      @media (min-width: 360px) and (max-width: 1023px) {
+        height: 100dvh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
     
     main {
         display: flex;
