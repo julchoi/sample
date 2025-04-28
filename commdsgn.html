@@ -12,7 +12,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="logo" href="work.html">julchoistudio.</a>
+                        <a class="logo" href="index.html">julchoistudio.</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -20,7 +20,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="work.html" class="active">Work</a>
+                        <a href="index.html" class="active">Work</a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/julchoi.studio/" target="_blank">Instagram</a>
@@ -57,19 +57,25 @@
                 </p>
               
                 <div class="img-box">
-                    <img src="assets/images/Main/COMMDSGN.png" alt="View Comm Dsgn">
+                    <picture>
+                        <source srcset="assets/images/Website Images/COMMDSGN-m/Main.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/COMMDSGN-t/Main.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/COMMDSGN/Main.png" alt="View Comm Dsgn">
+                    </picture>
                 </div>
                 <div class="img-box">
-                    <img src="assets/images/Main/empty.png" alt="View Comm Dsgn">
+                    <picture>
+                        <source srcset="assets/images/Website Images/COMMDSGN-m/empty1.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/COMMDSGN-t/empty1.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/COMMDSGN/empty1.png" alt="View Comm Dsgn">
+                    </picture>
                 </div>
                 <div class="img-box">
-                    <img src="assets/images/Main/empty.png" alt="View Comm Dsgn">
-                </div>
-                <div class="img-box">
-                    <img src="assets/images/Main/empty.png" alt="View Comm Dsgn">
-                </div>
-                <div class="img-box">
-                    <img src="assets/images/Main/empty.png" alt="View Comm Dsgn">
+                    <picture>
+                        <source srcset="assets/images/Website Images/COMMDSGN-m/empty2.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/COMMDSGN-t/empty2.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/COMMDSGN/empty2.png" alt="View Comm Dsgn">
+                    </picture>
                 </div>
 
                 <div class="pagenation">
@@ -88,6 +94,9 @@
 
             </div>
         </main>
+
+        <!-- mobile bottom menu -->
+        <m-nav></m-nav>
     </div>
 
     <script src="js/script.js"></script>

@@ -12,7 +12,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="logo" href="work.html">julchoistudio.</a>
+                        <a class="logo" href="index.html">julchoistudio.</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -20,7 +20,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="work.html" class="active">Work</a>
+                        <a href="index.html" class="active">Work</a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/julchoi.studio/" target="_blank">Instagram</a>
@@ -57,7 +57,11 @@
                 </p>
 
                 <div class="img-box">
-                    <img src="assets/images/Website Images/Morii Magazine/Main.png" alt="View Morii Magazine 1">
+                    <picture>
+                        <source srcset="assets/images/Website Images/Morii-m/Main.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/Morii-t/Main.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/Morii/Main.png" alt="View Morii Magazine">
+                    </picture>
                 </div>
 
                 <!-- <div class="desc-02">
@@ -67,25 +71,49 @@
 
                 <div class="img-col-2">
                     <div class="img-box">
-                        <img src="assets/images/Website Images/Morii Magazine/1-1.png" alt="View Morii Magazine 5">
+                        <picture>
+                            <source srcset="assets/images/Website Images/Morii-m/1-1.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Website Images/Morii-t/1-1.png" media="(max-width: 1024px)">
+                            <img src="assets/images/Website Images/Morii/1-1.png" alt="View Morii Magazine">
+                        </picture>
                     </div>
                     <div class="img-box">
-                        <img src="assets/images/Website Images/Morii Magazine/1-2.png" alt="View Morii Magazine 6">
+                        <picture>
+                            <source srcset="assets/images/Website Images/Morii-m/1-2.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Website Images/Morii-t/1-2.png" media="(max-width: 1024px)">
+                            <img src="assets/images/Website Images/Morii/1-2.png" alt="View Morii Magazine">
+                        </picture>
                     </div>
                 </div>
 
                 <div class="img-box">
-                    <img src="assets/images/Website Images/Morii Magazine/1.png" alt="View Morii Magazine 3">
+                    <picture>
+                        <source srcset="assets/images/Website Images/Morii-m/1.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/Morii-t/1.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/Morii/1.png" alt="View Morii Magazine">
+                    </picture>
                 </div> 
 
                 <div class="img-box">
-                    <img src="assets/images/Website Images/Morii Magazine/2.png" alt="View Morii Magazine 3">
+                    <picture>
+                        <source srcset="assets/images/Website Images/Morii-m/2.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/Morii-t/2.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/Morii/2.png" alt="View Morii Magazine">
+                    </picture>
                 </div>
                 <div class="img-box">
-                    <img src="assets/images/Website Images/Morii Magazine/3.png" alt="View Morii Magazine 4">
+                    <picture>
+                        <source srcset="assets/images/Website Images/Morii-m/3.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/Morii-t/3.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/Morii/3.png" alt="View Morii Magazine">
+                    </picture>
                 </div>
                 <div class="img-box">
-                    <img src="assets/images/Website Images/Morii Magazine/Empty GIF.png" alt="View Morii Magazine 4">
+                    <picture>
+                        <source srcset="assets/images/Website Images/Morii-m/Empty GIF.png" media="(max-width: 661px)">
+                        <source srcset="assets/images/Website Images/Morii-t/Empty GIF.png" media="(max-width: 1024px)">
+                        <img src="assets/images/Website Images/Morii/Empty GIF.png" alt="View Morii Magazine">
+                    </picture>
                 </div>
 
                 <div class="pagenation">
@@ -104,6 +132,10 @@
 
             </div>
         </main>
+
+        <!-- mobile bottom menu -->
+        <m-nav></m-nav>
+        
     </div>
 
     <script src="js/script.js"></script>
