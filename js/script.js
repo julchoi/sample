@@ -264,6 +264,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
     });
 
+
+    // 스크롤 시 아이템 애니메이션 효과
     const items = document.querySelectorAll('.grid-item');
 
     const observer = new IntersectionObserver((entries) => {
@@ -282,6 +284,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
     items.forEach((item) => observer.observe(item));
+
+    
 
     // mobile bottom menu
     const mMenuBtn = document.querySelector('.m-menu-btn');
