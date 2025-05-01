@@ -283,6 +283,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     items.forEach((item) => observer.observe(item));
 
+
+    const rightSection = document.querySelectorAll('.detail .right');
+
+    const observerRight = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                // observer.unobserve(entry.target); // 한 번만 실행
+            }
+
+            else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    items.forEach((item) => observer.observe(item));
+
+
+
     // mobile bottom menu
     const mMenuBtn = document.querySelector('.m-menu-btn');
     const mMenuNav = document.querySelector('.m-nav');
