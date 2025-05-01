@@ -123,7 +123,7 @@
                     &:active,
                     &.active {
                         &::after {
-                            content: '';
+                            content: attr(name);
                             color: #fff;
                             display: flex;
                             align-items: center;
@@ -156,117 +156,6 @@
                             &::after {
                                 font-size: 15px;
                             }
-                        }
-                    }
-
-                    /* 썸네일관리 */
-                    &.work01 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'AHOLE Typeface';
-                            }
-
-                        }
-                    }
-
-                    &.work02 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'MORII Magazine';
-                            }
-
-                        }
-                    }
-
-                    &.work03 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'COMM DSGN';
-                            }
-
-                        }
-                    }
-
-                    &.work04 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'Hey, Nike!';
-                            }
-
-                        }
-                    }
-
-                    &.work05 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'Airplan';
-                            }
-
-                        }
-                    }
-
-                    &.work06 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'Pedal to Petal';
-                            }
-
-                        }
-                    }
-
-                    &.work07 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'Pedal to Petal';
-                            }
-
-                        }
-                    }
-
-                    &.work08 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'Yearbook Poster';
-                            }
-
-                        }
-                    }
-
-                    &.work09 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'SOLE Magazine';
-                            }
-
-                        }
-                    }
-
-                    &.work10 {
-
-                        &:hover,
-                        &.active {
-                            &::after {
-                                content: 'COMM DSGN';
-                            }
-
                         }
                     }
 
