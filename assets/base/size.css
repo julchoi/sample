@@ -3,24 +3,37 @@
     --header-height: 60px;
     --common-gap: 30px;
     --border-thickness: 1.5px;
+    --border-radius : 20px;
 }
 
 /* Tablet Size */
-@media (min-width: 1023px) and (max-width: 1439px){
+@media (min-width: 1024px) and (max-width: 1439px){
     :root{
         --header-height: 42px;
         --common-gap: 15px;
         --left-width: 25%;
         --border-thickness: 1px;
+        --border-radius : 10px;
+    }
+}
+
+/* Mid Size */
+@media (min-width: 662px) and (max-width: 1023px){
+    :root{
+        --header-height: 42px;
+        --left-width: 39%;
+        --common-gap: 15px;
+        --border-radius : 10px;
     }
 }
 
 /* Mobile Size */
-@media (min-width: 360px) and (max-width: 1023px){
+@media (min-width: 360px) and (max-width: 661px){
     :root{
         --header-height: 48px;
         --common-gap: 15px;
         --border-thickness: 1px;
-
+        --border-radius : 10px;
     }
 }
+

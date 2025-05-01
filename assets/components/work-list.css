@@ -1,4 +1,4 @@
-work-list{
+work-list {
     .detail-list {
         display: flex;
         align-items: flex-start;
@@ -12,25 +12,27 @@ work-list{
                 li {
                     border-top: var(--border-thickness) solid #000;
 
-                    a{
+                    a {
                         display: flex;
                         align-items: center;
                         line-height: 46px;
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        /* Mid ~ Tablet Size */
+                        @media (min-width: 662px) and (max-width: 1439px) {
                             & {
                                 line-height: 32px;
                             }
                         }
                     }
 
-                    > .list-title {
+                    >.list-title {
                         line-height: 50px;
                         color: #5D4FF6;
                         text-transform: uppercase;
                         font-size: 16px;
 
-                        @media (min-width: 1023px) and (max-width: 1439px){
+                        /* Mid ~ Tablet Size */
+                        @media (min-width: 662px) and (max-width: 1439px) {
                             & {
                                 font-size: 11px;
                                 line-height: 32px;
@@ -38,14 +40,16 @@ work-list{
                         }
                     }
 
-                    &:first-child{
+                    &:first-child {
                         pointer-events: none;
                         border-top: 0;
                     }
 
-                    &:last-child{
+                    &:last-child {
                         border-bottom: var(--border-thickness) solid #000;
-                        &:hover, &.active{
+
+                        &:hover,
+                        &.active {
                             border-top: var(--border-thickness) solid var(--primary);
                             border-bottom: var(--border-thickness) solid var(--primary);
                             cursor: pointer;
@@ -60,7 +64,8 @@ work-list{
                             &:first-child {
                                 margin-right: 20px;
 
-                                @media (min-width: 1023px) and (max-width: 1439px){
+                                /* Mid ~ Tablet Size */
+                                @media (min-width: 662px) and (max-width: 1439px) {
                                     & {
                                         margin-right: 14px;
                                     }
@@ -71,64 +76,70 @@ work-list{
                                 margin-left: auto;
                             }
 
-                            &.icon{
+                            &.icon {
                                 display: none;
                             }
 
-                            @media (min-width: 1023px) and (max-width: 1439px){
+                            /* Mid ~ Tablet Size */
+                            @media (min-width: 662px) and (max-width: 1439px) {
                                 & {
                                     font-size: 12px;
                                 }
                             }
-                        }                               
+                        }
                     }
 
-                    &:hover, &.hover {
+                    &:hover,
+                    &.hover {
                         border-top: var(--border-thickness) solid var(--primary);
                         cursor: pointer;
 
-                        +li{
+                        +li {
                             border-top: var(--border-thickness) solid var(--primary);
                         }
-                        
+
                         span {
                             color: var(--primary);
 
-                            &:nth-child(3){
+                            &:nth-child(3) {
                                 opacity: 0;
                                 visibility: hidden;
                             }
-                            &.icon{
+
+                            &.icon {
                                 display: block;
                             }
                         }
                     }
 
-                    &.active{
+                    &.active {
                         border-top: var(--border-thickness) solid var(--primary);
                         pointer-events: none;
 
-                        +li{
+                        +li {
                             border-top: var(--border-thickness) solid var(--primary);
                         }
-                        
+
                         span {
                             color: var(--primary);
 
-                            &.icon{
+                            &.icon {
                                 display: none;
                             }
                         }
                     }
-                 
-                    @media (min-width: 1023px) and (max-width: 1439px){
+
+                    /* Mid ~ Tablet Size */
+                    @media (min-width: 662px) and (max-width: 1439px) {
                         & {
                             border-top: var(--border-thickness) solid #000;
                         }
 
-                        &:last-child{
+                        &:last-child {
                             border-bottom: var(--border-thickness) solid #000;
-                            &:hover, &.active{
+
+                            &:hover,
+                            &.active {
                                 border-top: var(--border-thickness) solid var(--primary);
                                 border-bottom: var(--border-thickness) solid var(--primary);
                                 cursor: pointer;
@@ -140,7 +151,8 @@ work-list{
                 &:first-child {
                     margin-bottom: 68px;
 
-                    @media (min-width: 1023px) and (max-width: 1439px){
+                    /* Mid ~ Tablet Size */
+                    @media (min-width: 662px) and (max-width: 1439px) {
                         & {
                             margin-bottom: 40px;
                         }
@@ -152,9 +164,9 @@ work-list{
 
     }
 
-    @media (min-width: 360px) and (max-width: 1023px){
-            &{
-                display: none;
-            }
+    @media (min-width: 360px) and (max-width: 661px) {
+        & {
+            display: none;
         }
+    }
 }
