@@ -1,39 +1,52 @@
+
+html{
+    font-size: 62.5%;
+}
+
 :root{
-    --left-width: 24%;
-    --header-height: 60px;
-    --common-gap: 30px;
-    --border-thickness: 1.5px;
-    --border-radius : 20px;
+    --left-width: 44.3rem;
+    --header-height: 6rem;
+    --common-gap: 3rem;
+    --border-thickness: .15rem;
+    --border-radius : 2rem;
+}
+
+
+/* Macbook Size */
+@media (min-width: 1536px) and (max-height: 900px){
+    html{
+        font-size: 50%;
+    }
 }
 
 /* Tablet Size */
 @media (min-width: 1024px) and (max-width: 1439px){
     :root{
-        --header-height: 42px;
-        --common-gap: 15px;
-        --left-width: 25%;
-        --border-thickness: 1px;
-        --border-radius : 10px;
+        --header-height: 4.2rem;
+        --common-gap: 1.5rem;
+        --left-width: 25.5rem;
+        --border-thickness: .1rem;
+        --border-radius : 1rem;
     }
 }
 
 /* Mid Size */
-@media (min-width: 662px) and (max-width: 1023px){
+@media (min-width: 836px) and (max-width: 1023px){
     :root{
-        --header-height: 42px;
-        --left-width: 39%;
-        --common-gap: 15px;
-        --border-radius : 10px;
+        --header-height: 4.2rem;
+        --left-width: 25.5rem;
+        --common-gap: 1.5rem;
+        --border-radius : 1rem;
     }
 }
 
 /* Mobile Size */
-@media (min-width: 360px) and (max-width: 661px){
+@media (min-width: 360px) and (max-width: 835px){
     :root{
-        --header-height: 48px;
-        --common-gap: 15px;
-        --border-thickness: 1px;
-        --border-radius : 10px;
+        --header-height: 4.2rem;
+        --common-gap: 1.5rem;
+        --border-thickness: .1rem;
+        --border-radius : 1rem;
     }
 }
 

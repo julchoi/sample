@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (e) => {
 
-    //Work List (Menu)
+    //Work List template (Menu)
     class workList extends HTMLElement {
         connectedCallback() {
             this.innerHTML = `<section class="detail-list">
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     customElements.define('work-list', workList);
 
-    //m-nav template
+    //m-nav template (Mobile bottom menu button)
     class mNav extends HTMLElement {
         connectedCallback() {
             this.innerHTML = `<div class="m-bottom-menu">
@@ -139,15 +139,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
                         <a href="index.html">Work</a>
                     </li>
                     <li>
-                        <a href="archive.html">Archive</a>
+                        <a href="playground.html">Playground</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
                     </li>
                 </ul>
                 <div>
-                    <a href="">Instagram <img src="assets/images/icons/arrow-dig.svg" alt="go instagram"></a>
-                    <a href="">Linkedin <img src="assets/images/icons/arrow-dig.svg" alt="go Linkedin"></a>
+                    <a href="https://www.instagram.com/julchoi.studio/">Instagram <img src="assets/images/icons/arrow-dig.svg" alt="go instagram"></a>
+                    <a href="https://www.linkedin.com/in/julie-c-454063305/">Linkedin <img src="assets/images/icons/arrow-dig.svg" alt="go Linkedin"></a>
                 </div>
             </nav>
         </div>`
@@ -155,6 +155,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     customElements.define('m-nav', mNav);
+
+
 
     // 해당 페이지에서 리스트 요소 활성화
     const workDetail = document.querySelectorAll(".detail .list-group > ul > li > a");
@@ -209,20 +211,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     });
-    const scrollContainer = document.querySelector(".work .grid");
 
+
+    // list hover 시 해당 이미지 위치로 스크롤 이동
     document.querySelectorAll("work-list .list-group li").forEach((list) => {
         list.addEventListener("mouseenter", function () {
             const id = this.dataset.id; // 이미지의 data-id 값 가져오기
             const targetImg = document.querySelector(`.grid .grid-item[data-id="${id}"] a`)
             targetImg?.classList.add("active");
 
-            const containerTop = scrollContainer.getBoundingClientRect().top; // 스크롤 컨테이너가 브라우저 기준에서 얼마나 아래에 있는지
             const imageTop = targetImg.getBoundingClientRect().top; // 타겟이미지가 브라우저 기준에서 얼마나 아래에 있는지지
+            const offset = window.scrollY + imageTop - 100;
 
-            const offset = imageTop - containerTop + scrollContainer.scrollTop - 100;
-
-            scrollContainer.scrollTo({
+            window.scrollTo({
                 top: offset,
                 behavior: "smooth"
             });
@@ -237,46 +238,22 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
 
-    //about페이지에서 스크롤시 하단 요소 애니메이션 작업
-    let lastScrollTop = 0;
-    let ticking = false;
-    const targetElement = document.querySelector(".hide-bottom");
-
-    function onScroll() {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScroll - lastScrollTop > 3) {
-            targetElement.style.transform = "translateY(100%)";
-            targetElement.style.opacity = "0";
-        } else if (lastScrollTop - currentScroll > 3) {
-            targetElement.style.transform = "translateY(0)";
-            targetElement.style.opacity = "1";
-        }
-
-        lastScrollTop = currentScroll; // 스크롤 값 갱신
-        ticking = false;
-    }
-
-    window.addEventListener("scroll", function () {
-        if (!ticking) {
-            requestAnimationFrame(onScroll);
-            ticking = true;
-        }
-    });
-
+    
 
     // 메인에서 아이템 애니메이션 효과
     const items = document.querySelectorAll('.grid-item');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+
+            const target = entry.target;
+            
             if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                // observer.unobserve(entry.target); // 한 번만 실행
+                target.classList.add('show');
             }
 
             else {
-                entry.target.classList.remove('show');
+                target.classList.remove('show');
             }
         });
     }, {
@@ -286,29 +263,35 @@ document.addEventListener('DOMContentLoaded', (e) => {
     items.forEach((item) => observer.observe(item));
 
 
-    // 디테일페이지에서 아이템 애니메이션 효과
-    const detailDesc = document.querySelectorAll('.detail > main > .right');
 
-    const detailObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+    // 디테일 페이지 요소 애니메이션 효과
+//     const parts = document.querySelectorAll('.detail > main > .right > *');
 
-    // 각 .right 안의 자식 요소들에 대해 observer 설정
-    detailDesc.forEach((rightSection) => {
-        
-        const parts = rightSection.children;
-        Array.from(parts).forEach((item) => {
-            detailObserver.observe(item);
-        });
-    });
+//  // Intersection Observer 생성
+//  const observer02 = new IntersectionObserver((entries, observer) => {
+//      entries.forEach(entry => {
+//          // entry.isIntersecting: 요소가 화면에 보이면 true, 아니면 false
+//          if (entry.isIntersecting) {
+//              entry.target.classList.add('show'); // 보이면 'show' 클래스 추가
+//              // 중요: 한번 보이면 더 이상 관찰할 필요 없으니까 관찰 중지!
+//              observer02.unobserve(entry.target);
+//          }
+//          // else 부분은 필요 없어. 한번 'show' 붙으면 안 뗄 거니까.
+//      });
+//  }, {
+//      // 옵션 설정 (화면 하단에서 얼마나 올라왔을 때 보인다고 판단할지)
+//      // rootMargin: '0px 0px -75px 0px' => 뷰포트 하단에서 75px 위에 트리거 라인 설정
+//      // threshold: 0 => 요소가 1px이라도 보이면 콜백 함수 실행
+//      rootMargin: '0px 0px -75px 0px',
+//      threshold: 0
+//  });
+
+//  // 아까 찾아둔 요소들을 각각 observer에게 관찰하라고 등록
+//  parts.forEach(item => {
+//      observer02.observe(item);
+//  });
+
+//  // requestAnimationFrame 부분은 이제 필요 없어짐!
 
 
 

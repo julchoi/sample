@@ -2,12 +2,16 @@ header {
     height: var(--header-height);
     border-bottom: var(--border-thickness) solid #000;
     position: fixed;
-    width: calc(100% - (var(--common-gap)*2));
+    top: 0;
+    left: 0;
+    padding: 0 var(--common-gap);
+    box-sizing: border-box;
+    width: 100%;
     background-color: #fff;
     z-index: 10;
 
     /* Mid ~ Tablet Size */
-    @media (min-width: 662px) and (max-width: 1439px) {
+    @media (min-width: 836px) and (max-width: 1439px) {
         & {
             border-bottom: var(--border-thickness) solid #000;
         }
@@ -20,31 +24,31 @@ header {
         height: 100%;
 
         ul {
-            width: calc(var(--left-width) + var(--common-gap) + 60px);
+            width: calc(var(--left-width) + var(--common-gap) + 6rem);
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             /* Mid ~ Tablet Size */
-            @media (min-width: 662px) and (max-width: 1439px) {
+            @media (min-width: 836px) and (max-width: 1439px) {
                 & {
-                    width: calc(var(--left-width) + var(--common-gap) + 48px);
+                    width: calc(var(--left-width) + var(--common-gap) + 40px);
                 }
             }
 
             li {
                 a {
-                    font-size: 23px;
+                    font-size: 2.3rem;
                     color: #000;
 
                     &.logo {
                         font-weight: 600;
-                        font-size: 24px;
+                        font-size: 2.4rem;
 
                         /* Mobile Size */
-                        @media (min-width: 360px) and (max-width: 661px) {
+                        @media (min-width: 360px) and (max-width: 835px) {
                             & {
-                                font-size: 17px;
+                                font-size: 1.7rem;
                             }
                         }
                     }
@@ -56,18 +60,18 @@ header {
 
 
                     /* Mid ~ Tablet Size */
-                    @media (min-width: 662px) and (max-width: 1439px) {
+                    @media (min-width: 836px) and (max-width: 1439px) {
                         & {
-                            font-size: 16px;
+                            font-size: 1.6rem;
 
                             &.logo {
-                                font-size: 17px;
+                                font-size: 1.7rem;
                             }
                         }
                     }
 
                     /* Mobile Size */
-                    @media (min-width: 360px) and (max-width: 661px) {
+                    @media (min-width: 360px) and (max-width: 835px) {
                         &:not(.logo) {
                             display: none;
                         }
@@ -75,25 +79,15 @@ header {
 
                 }
             }
-
-
-            &:last-child {
-
-                /* Mid Size */
-                @media (min-width: 662px) and (max-width: 1023px) {
-                    width: 50%;
-                    justify-content: flex-end;
-                    gap: 35%;
-                }
-            }
         }
     }
 
     /* Mobile Size */
-    @media (min-width: 360px) and (max-width: 661px) {
+    @media (min-width: 360px) and (max-width: 835px) {
         & {
             position: unset;
             width: 100%;
+            flex-shrink: 0;
         }
     }
 

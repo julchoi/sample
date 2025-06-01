@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"
-        integrity="sha512-WaqrlkVlJRs7/+/McaNTsxOA8LGnPK9pzfzTTHOCzo/XcgcC9yG8JJxJ+IGYn3j65x2DP9q0o8fBX8HtBJuc2g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"
-        integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js" integrity="sha512-WaqrlkVlJRs7/+/McaNTsxOA8LGnPK9pzfzTTHOCzo/XcgcC9yG8JJxJ+IGYn3j65x2DP9q0o8fBX8HtBJuc2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Work</title>
 </head>
-
 <body>
     <div class="wrap work">
+
+        <!-- header -->
         <header>
             <nav>
                 <ul>
                     <li>
-                        <a class="logo" href="/">julchoistudio.</a>
+                        <a class="logo" href="index.html">julchoistudio.</a>
                     </li>
                     <li>
-                        <a href="index.html">Work</a>
+                        <a href="about.html">About</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="index.html">Work</a> 
                     </li>
-
                     <li>
-                        <a href="archive.html">Archive</a>
+                        <a href="playground.html">Playground</a>
                     </li>
                 </ul>
-            </nav>
-
         </header>
+        <!-- header -->
 
         <main>
+
+            <!-- Left side -->
             <div class="left">
+
                 <section class="introduce">
                     <p>
-                        Hi, I’m Julie Choi, a New York–based designer creating intuitive digital experiences that bridge
-                        design and function. I focus on product design, with a growing passion for branding. </p>
+                        Hi, I’m Julie Choi, a New York–based designer creating intuitive digital experiences that bridge design and function. I focus on product design, with a growing passion for branding.                    </p>
                 </section>
-
+                
+                <!-- Work list Template (※ 내용 수정은 js파일 / css 수정은 work-list.css) -->
                 <work-list></work-list>
-
             </div>
+
+
+             <!-- Right side -->
             <div class="right grid">
+
                 <div class="grid-sizer"></div>
 
+                <!-- Top blank -->
                 <div class="blank-top grid-item"></div>
+
+
+                <!-- Work Thumnail list -->
+                <!-- 이미지 hover 시 나타나는 작업물 제목은 a태그 안의 name 부분에 작성하면 자동으로 들어갑니다. (css로 작성 X) -->
 
                 <div class="img-box grid-item" data-id="1">
                     <a href="ahole.html" class="work01" name="AHOLE, Typeface & Poster">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/AHOLE.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/AHOLE.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/AHOLE.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/AHOLE.png" alt="View AHOLE Typeface">
                         </picture>
@@ -68,17 +73,17 @@
                 <div class="img-box grid-item margin-none" data-id="2">
                     <a href="morii.html" class="work02" name="MORII Magazine, Editorial">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/MORII.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/MORII.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/MORII.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/MORII.png" alt="View MORII Magazine" loading="lazy">
                         </picture>
                         <p class="m-title">MORII Magazine, Editorial</p>
-                    </a>
+                    </a>  
                 </div>
                 <div class="img-box grid-item" data-id="3">
                     <a href="commdsgn.html" class="work03" name="COMM DSGN, Branding">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/COMMDSGN.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/COMMDSGN.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/COMMDSGN.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/COMMDSGN.png" alt="View COMM DSGN" loading="lazy">
                         </picture>
@@ -88,7 +93,7 @@
                 <div class="img-box grid-item margin-none" data-id="4">
                     <a href="heynike.html" class="work04" name="Hey, Nike!, UX/UI">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/Nike.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/Nike.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/Nike.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/Nike.png" alt="View Hey, Nike! UX/UI Design" loading="lazy">
                         </picture>
@@ -98,9 +103,9 @@
                 <div class="img-box grid-item" data-id="5">
                     <a href="airplan.html" class="work05" name="Airplan, UX/UI">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/Airplan.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/Airplan.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/Airplan.png" media="(max-width: 1024px)">
-                            <img src="assets/images/Main/Airplan.png" alt="View Airplan UX/UI Design" loading="lazy">
+                            <img src="assets/images/Main/Airplan.png" alt="View Airplan UX/UI Design" loading="lazy">                        
                         </picture>
                         <p class="m-title">Airplan, UX/UI</p>
                     </a>
@@ -108,7 +113,7 @@
                 <div class="img-box grid-item margin-none" data-id="6">
                     <a href="p2p.html" class="work06" name="Crafty Critter, UX/UI">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/P2P.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/P2P.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/P2P.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/P2P.png" alt="View Pedal to Petal Branding" loading="lazy">
                         </picture>
@@ -118,17 +123,17 @@
                 <div class="img-box grid-item" data-id="7">
                     <a href="pedaltopetal.html" class="work07" name="Pedal to Petal, Branding">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/P2P2.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/P2P2.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/P2P2.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/P2P2.png" alt="View Pedal to Petal Branding" loading="lazy">
                         </picture>
                         <p class="m-title">Pedal to Petal, Branding</p>
                     </a>
-                </div>
+                </div>   
                 <div class="img-box grid-item margin-none" data-id="8">
                     <a href="yearbook.html" class="work08" name="Yearbook Poster, Editorial">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/Yearbook.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/Yearbook.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/Yearbook.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/Yearbook.png" alt="View yearbook poster" loading="lazy">
                         </picture>
@@ -138,71 +143,103 @@
                 <div class="img-box grid-item margin-none" data-id="9">
                     <a href="empty.html" class="work09" name="Yearbook Poster, Editorial">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/empty1.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/empty1.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/empty1.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/empty1.png" alt="View yearbook poster" loading="lazy">
                         </picture>
                         <p class="m-title">Yearbook Poster, Editorial</p>
                     </a>
                 </div>
-                <div class="img-box grid-item margin-none" data-id="10">
+                <div class="img-box grid-item margin-none"  data-id="10">
                     <a href="empty2.html" class="work10" name="Yearbook Poster, Editorial">
                         <picture>
-                            <source srcset="assets/images/Main-mobile/empty2.png" media="(max-width: 661px)">
+                            <source srcset="assets/images/Main-mobile/empty2.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/empty2.png" media="(max-width: 1024px)">
                             <img src="assets/images/Main/empty2.png" alt="View yearbook poster" loading="lazy">
                         </picture>
                         <p class="m-title">Yearbook Poster, Editorial</p>
                     </a>
                 </div>
+
+                 <!-- bottom blank -->
                 <div class="blank grid-item"></div>
             </div>
         </main>
 
-        <!-- mobile bottom menu -->
+        <!-- mobile bottom menu Template  (※ 내용 수정은 js파일 / css 수정은 m-nav.css)-->
         <m-nav></m-nav>
 
     </div>
 
     <script src="js/script.js"></script>
     <script>
-
-        //Gallery View (Images)
         const grid = document.querySelector('.grid');
-
+        const body = document.body;
+    
         function getGutterByWindowWidth() {
             if (window.innerWidth > 1439) return 20;
             if (window.innerWidth < 1439) return 11;
             return 20;
         }
+    
+        let msnry = null;
+    
+        function initMasonry() {
+            msnry = new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+                gutter: getGutterByWindowWidth(),
+                fitWidth: false,
+                horizontalOrder: true
+            });
+        }
+    
+        function refreshMasonry() {
+            imagesLoaded(grid, function () {
+                msnry.layout();
+                // 스크롤 맨 위로
+            window.scrollTo(0, 0);
 
-        const msnry = new Masonry('.grid', {
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true,
-            gutter: getGutterByWindowWidth(),
-            fitWidth: false,
-            horizontalOrder: true,
-        });
-
+            });
+        }
+    
+        // 최초 초기화
         imagesLoaded(grid, function () {
+            initMasonry();
             msnry.layout();
+    
+            // 스크롤 맨 위로
+            window.scrollTo(0, 0);
+
+            // IntersectionObserver 적용 (선택 사항)
+            const items = document.querySelectorAll('.grid-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+    
+            items.forEach((item) => observer.observe(item));
         });
-
+    
+        // 리사이즈 대응
         let resizeTimer;
-
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                imagesLoaded(grid, () => {
-                    msnry.layout(); // Masonry 레이아웃 다시 계산
-                });
-            }, 200); // 너무 자주 발생하는 걸 방지 (debounce)
+                msnry.options.gutter = getGutterByWindowWidth();
+                refreshMasonry();
+            }, 200);
         });
-
-
     </script>
+    
 
 </body>
-
 </html>

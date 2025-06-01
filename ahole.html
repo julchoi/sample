@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Work</title>
 </head>
+
 <body>
     <div class="wrap work detail">
+
+        <!-- header -->
         <header>
             <nav>
                 <ul>
@@ -23,13 +31,17 @@
                         <a href="index.html">Work</a>
                     </li>
                     <li>
-                        <a href="archive.html" >Archive</a>
+                        <a href="playground.html">Playground</a>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!-- header -->
+
 
         <main>
+
+            <!-- Left Side : Work info -->
             <div class="left">
                 <section class="work-info">
                     <ul>
@@ -47,24 +59,31 @@
                         </li>
                     </ul>
                 </section>
-            
+
+                <!-- Work list Template (※ 내용 수정은 js파일 / css 수정은 work-list.css) -->
                 <work-list></work-list>
-                
+
             </div>
+
+
+            <!-- Right Side : Detail description -->
+
             <div class="right">
-                <p class="desc-01">"AHOLE" is an experimental typeface I created to explore the feeling of ambivalence — that weird space where you hold two opposite emotions at once. It’s built on a square grid, but the soft oval counters break that order, showing how complicated those feelings can be. "AHOLE" captures that contradiction — structured but emotional, bold but uncertain.</p>
-                
-                <div class="img-box">
+                <p class="desc-01" data-aos="fade-down" data-aos-once="false" data-aos-easing="ease" data-aos-duration="600" data>"AHOLE" is an experimental typeface I created to explore the
+                    feeling of ambivalence — that weird space where you hold two opposite emotions at once. It’s built
+                    on a square grid, but the soft oval counters break that order, showing how complicated those
+                    feelings can be. "AHOLE" captures that contradiction — structured but emotional, bold but uncertain.
+                </p>
+
+                <div class="img-box" data-aos="fade-down" data-aos-once="false" data-aos-easing="ease" data-aos-duration="600">
                     <picture>
-                        <source srcset="assets/images/Website_Images/AHOLE-m/Main.png" media="(max-width: 661px)">
-                        <source srcset="assets/images/Website_Images/AHOLE-t/Main.png" media="(max-width: 1024px)">
+                        <!-- <source srcset="assets/images/Website_Images/AHOLE-m/Main.png" media="(max-width: 835px)">
+                        <source srcset="assets/images/Website_Images/AHOLE-t/Main.png" media="(max-width: 1024px)"> -->
                         <img src="assets/images/Website_Images/AHOLE Typeface/Main.png" alt="View Ahole Typeface">
                     </picture>
                 </div>
-                <div class="img-box">
+                <div class="img-box" data-aos="fade-down">
                     <picture>
-                        <source srcset="assets/images/Website_Images/AHOLE-m/1.png" media="(max-width: 661px)">
-                        <source srcset="assets/images/Website_Images/AHOLE-t/1.png" media="(max-width: 1024px)">
                         <img src="assets/images/Website_Images/AHOLE Typeface/1.png" alt="View AHOLE Typeface">
                     </picture>
                 </div>
@@ -76,16 +95,12 @@
 
                 <div class="img-box">
                     <picture>
-                        <source srcset="assets/images/Website_Images/AHOLE-m/2.png" media="(max-width: 661px)">
-                        <source srcset="assets/images/Website_Images/AHOLE-t/2.png" media="(max-width: 1024px)">
                         <img src="assets/images/Website_Images/AHOLE Typeface/2.png" alt="View AHOLE Typeface">
                     </picture>
                 </div>
 
                 <div class="img-box">
                     <picture>
-                        <source srcset="assets/images/Website_Images/AHOLE-m/3.png" media="(max-width: 661px)">
-                        <source srcset="assets/images/Website_Images/AHOLE-t/3.png" media="(max-width: 1024px)">
                         <img src="assets/images/Website_Images/AHOLE Typeface/3.png" alt="View AHOLE Typeface">
                     </picture>
                 </div>
@@ -93,24 +108,18 @@
                 <div class="img-col-2">
                     <div class="img-box">
                         <picture>
-                            <source srcset="assets/images/Website_Images/AHOLE-m/3-1.png" media="(max-width: 661px)">
-                            <source srcset="assets/images/Website_Images/AHOLE-t/3-1.png" media="(max-width: 1024px)">
                             <img src="assets/images/Website_Images/AHOLE Typeface/3-1.png" alt="View AHOLE Typeface">
                         </picture>
                     </div>
                     <div class="img-box">
                         <picture>
-                            <source srcset="assets/images/Website_Images/AHOLE-m/3-2.png" media="(max-width: 661px)">
-                            <source srcset="assets/images/Website_Images/AHOLE-t/3-2.png" media="(max-width: 1024px)">
                             <img src="assets/images/Website_Images/AHOLE Typeface/3-2.png" alt="View AHOLE Typeface">
                         </picture>
                     </div>
                 </div>
-                
+
                 <div class="img-box">
                     <picture>
-                        <source srcset="assets/images/Website_Images/AHOLE-m/4.png" media="(max-width: 661px)">
-                        <source srcset="assets/images/Website_Images/AHOLE-t/4.png" media="(max-width: 1024px)">
                         <img src="assets/images/Website_Images/AHOLE Typeface/4.png" alt="View AHOLE Typeface">
                     </picture>
                 </div>
@@ -119,20 +128,28 @@
                 <div class="pagenation">
                     <a href="morii.html" class="next-btn">Next
                         <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5L14 4.5V3.5L0 3.5L0 4.5Z" fill="black"/>
-                            </svg>
+                            <path
+                                d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5L14 4.5V3.5L0 3.5L0 4.5Z"
+                                fill="black" />
+                        </svg>
                     </a>
                 </div>
             </div>
         </main>
 
-        <!-- mobile bottom menu -->
+        <!-- mobile bottom menu Template  (※ 내용 수정은 js파일 / css 수정은 m-nav.css)-->
         <m-nav></m-nav>
-    
+
 
     </div>
 
     <script src="js/script.js"></script>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
