@@ -10,6 +10,8 @@
     }
 
     main {
+
+
         /* Left Side : Work info */
 
         .left {
@@ -130,12 +132,12 @@
         
         .right {
             padding-top: var(--common-gap);
-            padding-bottom: 7rem;
+            padding-bottom: 3.6rem;
 
             >* {
-                /* opacity: 1; */
-                /* transform: translateY(-3rem); */
-                /* transition: opacity 0.6s ease, transform 0.6s ease; */
+                opacity: 0;
+                transform: translateY(-3rem);
+                transition: opacity 0.6s ease, transform 0.6s ease;
 
                 &.show {
                     opacity: 1;
@@ -279,11 +281,6 @@
                 width: 100%;
                 border-radius: var(--border-radius);
                 overflow: hidden;
-                box-sizing: border-box;
-
-                &.border{
-                    border: 1px solid #000;
-                }
 
                 /* Mid ~ Tablet Size */
                 @media (min-width: 836px) and (max-width: 1439px) {
@@ -312,6 +309,34 @@
 
             }
 
+            >.video-box{
+                margin-bottom: 2rem;
+                width: 100%;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+
+                /* Mid ~ Tablet Size */
+                @media (min-width: 836px) and (max-width: 1439px) {
+                    & {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                /* Mobile Size */
+                @media (min-width: 360px) and (max-width: 835px) {
+                    & {
+                        margin-bottom: .8rem;
+                    }
+                }
+
+                video {
+                    width: 100%;
+                    display: block;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
 
             /* 2개의 이미지가 붙어있는 스타일 */
             .img-col-2 {
@@ -368,11 +393,9 @@
             /* 페이지 버튼  */
             .pagenation {
                 width: 100%;
-                position: absolute;
-                top: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: flex-end;
+                align-items: center;
 
                 >a {
                     font-size: 1.8rem;
