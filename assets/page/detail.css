@@ -135,7 +135,7 @@
             padding-bottom: 3.6rem;
 
             >* {
-                opacity: 0;
+                opacity: 1;
                 transform: translateY(-3rem);
                 transition: opacity 0.6s ease, transform 0.6s ease;
 
