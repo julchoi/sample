@@ -150,7 +150,7 @@
                         <p class="m-title">Yearbook Poster, Editorial</p>
                     </a>
                 </div>
-                <div class="img-box grid-item margin-none"  data-id="10">
+                <div class="img-box grid-item margin-none" data-id="10">
                     <a href="empty2.html" class="work10" name="Yearbook Poster, Editorial">
                         <picture>
                             <source srcset="assets/images/Main-mobile/empty2.png" media="(max-width: 835px)">
@@ -176,6 +176,9 @@
         const grid = document.querySelector('.grid');
         const body = document.body;
     
+        // no scroll during loading
+        body.classList.add('loading');
+    
         function getGutterByWindowWidth() {
             if (window.innerWidth > 1439) return 20;
             if (window.innerWidth < 1439) return 11;
@@ -198,9 +201,6 @@
         function refreshMasonry() {
             imagesLoaded(grid, function () {
                 msnry.layout();
-                // 스크롤 맨 위로
-            window.scrollTo(0, 0);
-
             });
         }
     

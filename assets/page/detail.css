@@ -130,7 +130,7 @@
         
         .right {
             padding-top: var(--common-gap);
-            padding-bottom: 3.6rem;
+            padding-bottom: 7rem;
 
             >* {
                 /* opacity: 1; */
@@ -368,9 +368,11 @@
             /* 페이지 버튼  */
             .pagenation {
                 width: 100%;
+                position: absolute;
+                top: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-end;
 
                 >a {
                     font-size: 1.8rem;
