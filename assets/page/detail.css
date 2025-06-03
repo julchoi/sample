@@ -3,11 +3,11 @@
     padding-bottom: 7rem;
 
     /* Mid ~ Tablet Size */
-    @media (min-width: 360px) and (max-width: 1439px) {
+    /* @media (min-width: 360px) and (max-width: 1439px) {
         & {
             height: 110dvh;
         }
-    }
+    } */
 
 
     [data-aos="fade-down"] {
