@@ -6,15 +6,12 @@
     @media (min-width: 360px) and (max-width: 1439px) {
         & {
             height: 100dvh;
-            overflow-x: hidden;
-            overflow-y: auto;
         }
     }
 
 
     [data-aos="fade-down"] {
         transform: translateY(-3rem);
-        /* 기본보다 부드럽게 */
         opacity: 0;
         transition-property: transform, opacity;
     }
@@ -25,7 +22,6 @@
     }
 
     main {
-        height: calc(100% - var(--header-height) - var(--common-gap));
 
         /* Left Side : Work info */
         .left {
@@ -152,7 +148,7 @@
             /* Mid ~ Tablet Size */
             @media (min-width: 836px) and (max-width: 1439px) {
                 & {
-                    padding-bottom: 2.8rem;
+                    padding-bottom: 7rem;
                 }
             }
 

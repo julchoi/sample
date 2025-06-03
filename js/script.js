@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         easing: 'ease-in-out',
         once: false,
         mirror: true,
-        anchorPlacement: 'top-center',
+        anchorPlacement: 'top-bottom',
         offset: 80
     });
 
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         AOS.refreshHard();
         window.scrollTo(0,0);
-    }, 100); // 짧은 지연 후 위치 다시 계산
+    }, 150); // 짧은 지연 후 위치 다시 계산
 
 
 

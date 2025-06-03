@@ -1,19 +1,17 @@
 .work {
 
     /* 모바일에서 하단바 고정 */
-    @media (min-width: 360px) and (max-width: 835px) {
+    @media (min-width: 360px) and (max-width: 1439px) {
         & {
             height: 100dvh;
-            overflow-x: hidden;
-            overflow-y: auto;
+            /* overflow-x: hidden;
+            overflow-y: auto; */
         }
     }
 
     main {
-        /* position: relative; */
         display: flex;
         gap: var(--common-gap);
-        /* height: calc(100vh - var(--header-height)); */
         padding-top: var(--header-height);
 
         /* mobile Size */
@@ -34,6 +32,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding-top: var(--common-gap);
+
 
             /* Mid ~ Tablet Size */
             @media (min-width: 836px) and (max-width: 1439px) {
@@ -98,6 +97,7 @@
                 position: relative !important;
                 width: 100%;
                 overflow: unset;
+                margin-left: 0;
             }
 
 
@@ -109,7 +109,7 @@
                 direction: ltr;
 
                 /* Macbook Size */
-                @media (min-width: 1536px) and (max-height: 900px) {
+                @media (min-width: 1440px) and (max-height: 900px) {
                     width: calc((100% - 2.5rem) / 2);
                     /*2 colunm*/
                 }

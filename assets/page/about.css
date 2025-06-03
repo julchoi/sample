@@ -305,7 +305,6 @@
                     }
 
                     &.m-contact {
-
                         display: none;
 
                         /* Mobile Size */
@@ -322,7 +321,7 @@
                         }
 
                         /* Mid ~ Tablet Size */
-                        @media (min-width: 836px) and (max-width: 1439px) {
+                        @media (min-width: 836px) and (max-width: 1023px) {
                             display: flex;
 
                             >ul {
@@ -344,7 +343,7 @@
                         border-bottom: 0;
 
                         /* Mobile ~ tablet Size */
-                        @media (min-width: 360px) and (max-width: 1439px) {
+                        @media (min-width: 360px) and (max-width: 1023px) {
                             border-bottom: var(--border-thickness) solid black;
                         }
                     }

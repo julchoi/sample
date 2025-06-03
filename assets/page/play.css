@@ -33,7 +33,7 @@
                 direction: ltr;
 
                 /* Macbook Size */
-                @media (min-width: 1536px) and (max-height: 900px) {
+                @media (min-width: 1440px) and (max-height: 900px) {
                     width: calc((100% - 5rem) / 3);
                 }
 
