@@ -109,8 +109,7 @@ section {
 body {
 	line-height: 1;
 	height: 110dvh;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: visible;
 }
 
 ol,
