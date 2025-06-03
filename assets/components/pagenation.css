@@ -1,0 +1,83 @@
+
+    /* 페이지 버튼  */
+    .pagenation {
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -3.5rem;
+        right: 0;
+
+        >a {
+            font-size: 1.8rem;
+            line-height: 3.7rem;
+            border: var(--border-thickness) solid var(--black);
+            padding: 0 2.2rem;
+            border-radius: 5rem;
+            display: flex;
+            align-items: center;
+            margin: 0 .7rem;
+            gap: .5rem;
+
+            &:hover {
+                border-color: var(--primary);
+                color: var(--primary);
+
+                >svg {
+                    path {
+                        fill: var(--primary);
+                    }
+                }
+            }
+
+            &:active {
+                background-color: var(--black);
+                border-color: var(--black);
+                color: var(--white);
+
+                >svg {
+                    path {
+                        fill: var(--white);
+                    }
+                }
+            }
+
+            /* Mid ~ Tablet Size */
+            @media (min-width: 836px) and (max-width: 1439px) {
+                & {
+                    font-size: 1.2rem;
+                    line-height: 2.8rem;
+                    padding: 0 1.3rem;
+                    border: var(--border-thickness) solid var(--black);
+                    margin-top: .8rem;
+                }
+            }
+
+            /* Mobile Size */
+            @media (min-width: 360px) and (max-width: 835px) {
+                margin-top: .5rem;
+                font-size: 1.2rem;
+                line-height: 2.7rem;
+                padding: 0 1.5rem;
+                margin-left: 0;
+                margin-right: 0;
+
+                &:only-child {
+                    margin-left: auto;
+                }
+
+                .end-page & {
+                    margin-left: unset;
+                }
+            }
+        }
+
+        /* Mobile Size */
+        @media (min-width: 360px) and (max-width: 835px) {
+            & {
+                justify-content: space-between;
+            }
+        }
+    }

@@ -238,16 +238,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
 
-    
+
 
     // 메인에서 아이템 애니메이션 효과
     const items = document.querySelectorAll('.grid-item');
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
 
             const target = entry.target;
-            
+
             if (entry.isIntersecting) {
                 target.classList.add('show');
             }
@@ -265,33 +264,35 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     // 디테일 페이지 요소 애니메이션 효과
-//     const parts = document.querySelectorAll('.detail > main > .right > *');
 
-//  // Intersection Observer 생성
-//  const observer02 = new IntersectionObserver((entries, observer) => {
-//      entries.forEach(entry => {
-//          // entry.isIntersecting: 요소가 화면에 보이면 true, 아니면 false
-//          if (entry.isIntersecting) {
-//              entry.target.classList.add('show'); // 보이면 'show' 클래스 추가
-//              // 중요: 한번 보이면 더 이상 관찰할 필요 없으니까 관찰 중지!
-//              observer02.unobserve(entry.target);
-//          }
-//          // else 부분은 필요 없어. 한번 'show' 붙으면 안 뗄 거니까.
-//      });
-//  }, {
-//      // 옵션 설정 (화면 하단에서 얼마나 올라왔을 때 보인다고 판단할지)
-//      // rootMargin: '0px 0px -75px 0px' => 뷰포트 하단에서 75px 위에 트리거 라인 설정
-//      // threshold: 0 => 요소가 1px이라도 보이면 콜백 함수 실행
-//      rootMargin: '0px 0px -75px 0px',
-//      threshold: 0
-//  });
+    const parts = document.querySelectorAll('.detail > main > .right > *');
+    parts.forEach(el => {
+        el.setAttribute('data-aos', 'fade-down');
+    });
 
-//  // 아까 찾아둔 요소들을 각각 observer에게 관찰하라고 등록
-//  parts.forEach(item => {
-//      observer02.observe(item);
-//  });
 
-//  // requestAnimationFrame 부분은 이제 필요 없어짐!
+    // 페이지네이션 요소 aos 속성 및 offset 추가
+    const pagenation = document.querySelector('.pagenation');
+    pagenation.setAttribute('data-aos', 'fade-down');
+    pagenation.setAttribute('data-aos-offset', '40');
+
+    // AOS 초기화
+    AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: true,
+        anchorPlacement: 'top-center',
+        offset: 80
+    });
+
+
+    // 강제로 다시 체크해서 상단 요소도 애니메이션하게
+    setTimeout(() => {
+        AOS.refreshHard();
+        window.scrollTo(0,0);
+    }, 100); // 짧은 지연 후 위치 다시 계산
+
 
 
 

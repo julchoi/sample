@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js" integrity="sha512-WaqrlkVlJRs7/+/McaNTsxOA8LGnPK9pzfzTTHOCzo/XcgcC9yG8JJxJ+IGYn3j65x2DP9q0o8fBX8HtBJuc2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"
+        integrity="sha512-WaqrlkVlJRs7/+/McaNTsxOA8LGnPK9pzfzTTHOCzo/XcgcC9yG8JJxJ+IGYn3j65x2DP9q0o8fBX8HtBJuc2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"
+        integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Work</title>
 </head>
+
 <body>
     <div class="wrap work">
 
@@ -24,7 +31,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="index.html">Work</a> 
+                        <a href="index.html">Work</a>
                     </li>
                     <li>
                         <a href="playground.html">Playground</a>
@@ -40,15 +47,16 @@
 
                 <section class="introduce">
                     <p>
-                        Hi, I’m Julie Choi, a New York–based designer creating intuitive digital experiences that bridge design and function. I focus on product design, with a growing passion for branding.                    </p>
+                        Hi, I’m Julie Choi, a New York–based designer creating intuitive digital experiences that bridge
+                        design and function. I focus on product design, with a growing passion for branding. </p>
                 </section>
-                
+
                 <!-- Work list Template (※ 내용 수정은 js파일 / css 수정은 work-list.css) -->
                 <work-list></work-list>
             </div>
 
 
-             <!-- Right side -->
+            <!-- Right side -->
             <div class="right grid">
 
                 <div class="grid-sizer"></div>
@@ -78,7 +86,7 @@
                             <img src="assets/images/Main/MORII.png" alt="View MORII Magazine" loading="lazy">
                         </picture>
                         <p class="m-title">MORII Magazine, Editorial</p>
-                    </a>  
+                    </a>
                 </div>
                 <div class="img-box grid-item" data-id="3">
                     <a href="commdsgn.html" class="work03" name="COMM DSGN, Branding">
@@ -105,7 +113,7 @@
                         <picture>
                             <source srcset="assets/images/Main-mobile/Airplan.png" media="(max-width: 835px)">
                             <source srcset="assets/images/Main-tablet/Airplan.png" media="(max-width: 1024px)">
-                            <img src="assets/images/Main/Airplan.png" alt="View Airplan UX/UI Design" loading="lazy">                        
+                            <img src="assets/images/Main/Airplan.png" alt="View Airplan UX/UI Design" loading="lazy">
                         </picture>
                         <p class="m-title">Airplan, UX/UI</p>
                     </a>
@@ -129,7 +137,7 @@
                         </picture>
                         <p class="m-title">Pedal to Petal, Branding</p>
                     </a>
-                </div>   
+                </div>
                 <div class="img-box grid-item margin-none" data-id="8">
                     <a href="yearbook.html" class="work08" name="Yearbook Poster, Editorial">
                         <picture>
@@ -161,7 +169,7 @@
                     </a>
                 </div>
 
-                 <!-- bottom blank -->
+                <!-- bottom blank -->
                 <div class="blank grid-item"></div>
             </div>
         </main>
@@ -172,21 +180,23 @@
     </div>
 
     <script src="js/script.js"></script>
+
+
     <script>
         const grid = document.querySelector('.grid');
         const body = document.body;
-    
+
         // no scroll during loading
         body.classList.add('loading');
-    
+
         function getGutterByWindowWidth() {
             if (window.innerWidth > 1439) return 20;
             if (window.innerWidth < 1439) return 11;
             return 20;
         }
-    
+
         let msnry = null;
-    
+
         function initMasonry() {
             msnry = new Masonry(grid, {
                 itemSelector: '.grid-item',
@@ -197,38 +207,22 @@
                 horizontalOrder: true
             });
         }
-    
+
         function refreshMasonry() {
             imagesLoaded(grid, function () {
                 msnry.layout();
             });
         }
-    
+
         // 최초 초기화
         imagesLoaded(grid, function () {
             initMasonry();
             msnry.layout();
-    
+
             // 스크롤 맨 위로
             window.scrollTo(0, 0);
-
-            // IntersectionObserver 적용 (선택 사항)
-            const items = document.querySelectorAll('.grid-item');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                    } else {
-                        entry.target.classList.remove('show');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-    
-            items.forEach((item) => observer.observe(item));
         });
-    
+
         // 리사이즈 대응
         let resizeTimer;
         window.addEventListener('resize', () => {
@@ -239,7 +233,9 @@
             }, 200);
         });
     </script>
-    
+
+
 
 </body>
+
 </html>
