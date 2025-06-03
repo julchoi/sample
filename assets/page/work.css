@@ -4,8 +4,7 @@
     @media (min-width: 360px) and (max-width: 1439px) {
         & {
             height: 100dvh;
-            /* overflow-x: hidden;
-            overflow-y: auto; */
+            overflow: visible;
         }
     }
 
