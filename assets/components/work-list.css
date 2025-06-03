@@ -1,5 +1,11 @@
 work-list {
     padding-bottom: 9.8rem;
+
+    /* Mid ~ Tablet Size */
+    @media (min-width: 836px) and (max-width: 1439px) {
+        padding-bottom: 7.7rem;
+    }
+
     .detail-list {
         display: flex;
         align-items: flex-start;

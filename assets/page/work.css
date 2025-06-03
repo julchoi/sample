@@ -34,11 +34,6 @@
             padding-top: var(--common-gap);
 
 
-            /* Mid ~ Tablet Size */
-            @media (min-width: 836px) and (max-width: 1439px) {
-                padding-bottom: 7.7rem;
-            }
-
             /* mobile Size */
             @media (min-width: 360px) and (max-width: 835px) {
                 position: unset;

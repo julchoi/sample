@@ -74,10 +74,14 @@
     }
 
 
+     /* Mobile Size */
+    @media (min-width: 836px) and (max-width: 1439px) {
+        bottom: 2.4rem;
+    }
+
     /* Mobile Size */
     @media (min-width: 360px) and (max-width: 835px) {
-        & {
-            justify-content: space-between;
-        }
+        justify-content: space-between;
+        bottom: 2.4rem;
     }
 }

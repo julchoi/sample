@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // 페이지네이션 요소 aos 속성 및 offset 추가
     const pagenation = document.querySelector('.pagenation');
     pagenation.setAttribute('data-aos', 'fade-down');
-    pagenation.setAttribute('data-aos-offset', '40');
+    pagenation.setAttribute('data-aos-offset', '10');
 
     // AOS 초기화
     AOS.init({
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         easing: 'ease-in-out',
         once: false,
         mirror: true,
-        anchorPlacement: 'top-bottom',
+        anchorPlacement: 'top-top',
         offset: 80
     });
 
