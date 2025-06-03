@@ -111,6 +111,7 @@ body {
 
 	@media (max-width: 1439px) {
 		height: 100dvh;
+		overflow-y: auto;
 	}
 }
 
